@@ -1,0 +1,142 @@
+.portfolio {
+    background: $white;
+    height: 100vh;
+    display: flex;
+    transform: all 200ms;
+    @include bp(768) {
+        flex-direction: column;
+    }
+}
+
+.portfolio--half {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    @include bp(768) {
+        width: 100%;
+        height: 50vh;
+    }
+    &__left {
+        background-color: $lightGrey;
+        display: flex;
+        flex-direction: column;
+        @include bp (768) {
+            height: 30vh;
+            display: none;
+        }
+    }
+    &__right {
+        background-color: $white;
+        position: relative;
+        @include bp(768) {
+            height: 100vh ;
+        }
+        & .wrapper {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 200ms;
+            @include bp(768) {
+                height: 100vh;
+            }
+        }
+    }
+}
+
+.portfolio--title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & h1 {
+        font-size: 7rem;
+        color: $lightGrey;
+    }
+    & h4 {
+        position: absolute;
+        color: $secondary;
+    }
+}
+
+.portfolio--project {
+    @include bp(768) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.project {
+    color: $medGrey;
+    display: none;
+    margin-top: 20px;
+    @include bp (768) {
+        width: 50%;
+    }
+    & figure {
+        width: 60%;
+    }
+    &--wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &--links {
+        display: flex;
+    }
+    & p {
+        @include bp(768) {
+            display: none;
+        }
+    }
+}
+
+.visible {
+    display: block;
+}
+
+
+.portfolio--contentBlock{
+    width: 100%;
+    height: 25%;
+    padding-left: 50px;
+    padding-top: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transform: all 200ms;
+    cursor: pointer;
+    &__one {
+        background-color: $lightGrey;
+        &:hover {
+
+        }
+    }
+    &__two {
+        background-color: $medGrey;
+    }
+    &__three {
+        background-color: #3d3c3c;
+    }
+    &__four {
+        background-color: $primary;
+    }
+}
+
+.portfolio--phone {
+    width: 120px;
+    transform: rotate(25deg);
+    margin-right: 50px;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    transform: all 200ms;
+}
+
+.pink {
+    color: $secondary;
+}

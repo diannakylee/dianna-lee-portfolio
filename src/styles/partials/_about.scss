@@ -1,0 +1,79 @@
+.about {
+    background: $white;
+    height: 100vh;
+    display: flex;
+    @include bp (768) {
+        flex-direction: column;
+    }
+}
+
+.about--half {
+    width: 50%;
+    height: 100vh;
+    @include bp(768) {
+        width: 100%;
+        height: 50vh;;
+    }
+    display: flex;
+    &__left {
+        background-color: $secondary;
+    }
+    &__right {
+        background-color: $white;
+        position: relative;
+        color: $primary;
+    }
+}
+
+.about--half__right .wrapper {
+    display: flex;
+}
+
+.about--title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    @include bp(768) {
+        height: 50vh;
+    }
+    position: relative;
+    & h1 {
+        font-size: 7rem;
+    }
+    & h4 {
+        position: absolute;
+        color: $primary;
+    }
+}
+
+.circle--about {
+    width: 150px;
+    height: 150px;
+    background-color: $lightGrey;
+    background: url('/src/assets/dleecam.jpg');
+    background-size: 200%;
+    background-position: -85px -40px;
+    position: absolute;
+    left: -80px;
+    top: 100px;
+    clip-path: circle(50%);
+}
+
+.about--blurb {
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        & h2 {
+            flex-basis: 100%;
+        }
+        & p {
+            flex-basis: 50%;
+        }
+    }
+}

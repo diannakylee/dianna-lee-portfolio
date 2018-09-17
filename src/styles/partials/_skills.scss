@@ -1,0 +1,64 @@
+.skills {
+    background: $white;
+    height: 100vh;
+    display: flex;
+    @include bp (768) {
+        flex-direction: column;
+    }
+}
+
+.skills--half {
+    width: 50%;
+    height: 100vh;
+    @include bp (768) {
+        width: 100%;
+        height: 50vh;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    &__left {
+        background-color: $primary;
+    }
+    &__right {
+        background-color: $white;
+        position: relative;
+        color: $lightGrey;
+    }
+}
+
+.skills--title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    @include bp (768) {
+        height: 50vh;
+    }
+    position: relative;
+    & h1 {
+        font-size: 7rem;
+    }
+    & h4 {
+        position: absolute;
+        color: $secondary;
+    }
+}
+
+.skills--blurb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h1 {
+        margin: 15px;
+        font-size: 5rem;
+        &:hover {
+            color: $secondary;
+        }
+    }
+    &__row {
+        display: flex;
+    }
+}

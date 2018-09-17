@@ -1,3 +1,9 @@
-body {
-    background: red;
-}
+@import "partials/setup.scss";
+@import "partials/utilities.scss";
+@import "partials/navigation.scss";
+@import "partials/header.scss";
+@import "partials/about.scss";
+@import "partials/portfolio.scss";
+@import "partials/skills.scss";
+@import "partials/contact.scss";
+

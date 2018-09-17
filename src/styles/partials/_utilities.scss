@@ -1,0 +1,84 @@
+$primary: #242222;
+$secondary: #f7484e;
+$lightGrey: #cacaca;
+$medGrey: #898989;
+$white: #fdfdfd;
+
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	background-repeat: repeat;
+	font-family: "Open Sans", sans-serif;
+	color: $white;
+	// overflow: hidden;
+}
+
+h1, h2, h3, h4, figure, img, button, p, li, ul {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway";
+	text-transform: uppercase;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+nav {
+	text-transform: uppercase;
+	position: fixed;
+	z-index: 99;
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
+	display: inline;
+}
+
+a {
+	color: $secondary;
+	padding: 15px;
+	text-decoration: none;
+	&:hover {
+		color: $lightGrey;
+	}
+}
+
+.wrapper {
+	max-width: 1280px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+@mixin bp($point) {
+	@if $point == 1068 {
+		@media (max-width: 1068px) { @content; }
+	}
+	@else if $point == 980 {
+		@media (max-width: 980px) { @content; }
+	}
+		@else if $point == 768 {
+		@media (max-width: 768px)  { @content; }
+	}
+	@else if $point == 736 {
+		@media (max-width: 736px)  { @content; }
+	}
+	@else if $point == 570 {
+		@media (max-width: 570px) { @content; }
+	}
+	@else if $point == 480 {
+		@media (max-width: 480px)  { @content; }
+	}
+}
+
+
