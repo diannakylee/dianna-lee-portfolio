@@ -76,12 +76,5 @@ $(function () {
         alterClass();
 
     // animate phone reveal + background
-    const phoneReveal = () => {
-        $(".portfolio-contentBlock").on('hover', function (){
-            $(this).find('figure').css({
-                bottom: 0
-            }).animate({ bottom: bottom }, "slow");
-        });
-    }
-    phoneReveal();
+    ScrollReveal().reveal('.portfolio--phone', { delay: 500 });
 });

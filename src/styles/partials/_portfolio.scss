@@ -20,6 +20,8 @@
         background-color: $lightGrey;
         display: flex;
         flex-direction: column;
+        overflow: visible;
+        z-index: 10;
         @include bp (768) {
             height: 30vh;
             display: none;
@@ -64,6 +66,7 @@
     @include bp(768) {
         display: flex;
         flex-wrap: wrap;
+        overflow: scroll;
     }
 }
 
@@ -71,21 +74,28 @@
     color: $medGrey;
     display: none;
     margin-top: 20px;
+
     @include bp (768) {
         width: 50%;
+    }
+    & h2 {
+        margin-top: 15px;
     }
     & figure {
         width: 60%;
     }
     &--wrap {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
     &--links {
         display: flex;
+        margin-top: 20px;
     }
     & p {
         @include bp(768) {
@@ -108,22 +118,30 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    transform: all 200ms;
+    transform: all 300ms;
     cursor: pointer;
-    &__one {
-        background-color: $lightGrey;
-        &:hover {
+    &:hover {
+        width: 105%;
+        transform: all 300ms;
 
+    }
+    & h1 {
+        width: 70%;
+    }
+    &__one {
+        background-color: $primary;
+        &:hover {
+            
         }
     }
     &__two {
-        background-color: $medGrey;
-    }
-    &__three {
         background-color: #3d3c3c;
     }
+    &__three {
+        background-color: $medGrey;
+    }
     &__four {
-        background-color: $primary;
+        background-color: $lightGrey;
     }
 }
 

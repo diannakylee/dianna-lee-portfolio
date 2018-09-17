@@ -13,6 +13,9 @@
 	color: $white;
 	position:relative;
 	padding:4px;
+	@include bp (768) {
+		color: $secondary;
+	}
 }
 .pagination a.active:after {
 	box-shadow:inset 0 0 0 5px;
@@ -44,4 +47,44 @@
 	top:0;
 	right:4px;
 	bottom:0;
+}
+
+// social 
+
+.social {
+	top: 225px;
+    position: fixed;
+	right: 0px;
+	z-index: 101;
+	@include bp(768){
+		top: 390px;
+	}
+    & ul {
+		display: flex;
+		flex-direction: column;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    & ul li {
+        margin: 5px 5px;
+    }
+    & ul li a {
+        font-size: 2.4rem;
+        color: $lightGrey;
+		transition: 300ms;
+		&:hover {
+			color: $medGrey;
+		}
+    }
+    
+}
+
+.social--link a:hover {
+    color: $lightGrey;
+}
+
+
+// navigation
+.navBar {
+    color: $secondary;
 }

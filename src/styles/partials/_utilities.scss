@@ -54,11 +54,7 @@ a {
 	}
 }
 
-.wrapper {
-	max-width: 1280px;
-	width: 90%;
-	margin: 0 auto;
-}
+
 
 @mixin bp($point) {
 	@if $point == 1068 {
@@ -81,4 +77,12 @@ a {
 	}
 }
 
+.wrapper {
+	max-width: 1280px;
+	width: 90%;
+	margin: 0 auto;
+	@include bp (768) {
+		width: 80%;
+	}
+}
 
