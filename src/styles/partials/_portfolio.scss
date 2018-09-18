@@ -26,12 +26,19 @@
             height: 30vh;
             display: none;
         }
+        @include bp (570) {
+            height: 80vh;
+            display: block;
+        }
     }
     &__right {
         background-color: $white;
         position: relative;
         @include bp(768) {
             height: 100vh ;
+        }
+        @include bp (570) {
+            height: 20vh;
         }
         & .wrapper {
             height: 100vh;
@@ -43,6 +50,9 @@
             @include bp(768) {
                 height: 100vh;
             }
+            @include bp (570) {
+            height: 20vh;
+        }
         }
     }
 }
@@ -69,7 +79,9 @@
     @include bp(768) {
         display: flex;
         flex-wrap: wrap;
-        overflow: scroll;
+    }
+    @include bp (570) {
+        display: none;
     }
 }
 
@@ -81,11 +93,20 @@
     @include bp (768) {
         width: 50%;
     }
+    @include bp (570) {
+        width: 100%;
+    }
     & h2 {
         margin-top: 15px;
+        @include bp (570) {
+            font-size: 2rem;
+        }
     }
     & figure {
         width: 60%;
+        @include bp(570) {
+            width: 40%;
+        }
     }
     &--wrap {
         width: 80%;
@@ -102,8 +123,8 @@
     &--links {
         display: flex;
         margin-top: 20px;
-        @include bp (570) {
-            margin-top: 0;
+        @include bp (768){
+            display: none;
         }
     }
     & p {
@@ -111,6 +132,17 @@
             display: none;
         }
     }
+}
+
+.project--icons {
+    display: none;
+    & a {
+        font-size: 2.4rem;
+    }
+    @include bp (768) {
+        display: block;
+    }
+
 }
 
 .visible {
@@ -132,10 +164,17 @@
     &:hover {
         width: 105%;
         transform: all 300ms;
+        @include bp (570) {
+            width: 100%;
+        }
 
     }
     & h1 {
         width: 70%;
+        z-index: 11;
+        @include bp (480) {
+            font-size: 2.4rem;
+        }
     }
     &__one {
         background-color: $primary;
@@ -148,6 +187,16 @@
     }
     &__four {
         background-color: $lightGrey;
+    }
+}
+
+.project--icons__inside {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    z-index: 12;
+    & a {
+        font-size: 2.4rem;
     }
 }
 

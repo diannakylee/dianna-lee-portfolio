@@ -71,6 +71,12 @@
     left: -190px;
     top: 150px;
     transform: rotate(35deg);
+    @include bp (1068) {
+        width: 200px;
+        height: 200px;
+        left: -136px;
+        top: 200px;
+    }
     @include bp(768) {
         width: 100px;
         height: 100px;
@@ -90,25 +96,62 @@
     justify-content: center;
     align-items: center;
     width: 60%;
-}
-
-
-.content__container__list {
-    display: flex;
-    flex-direction: column;
-    color: $secondary;
-    overflow: hidden;
-    height: 60px;
-    text-align: center;
-    scro
-    &__item {
-        margin: 10px 0;
-        & h1 {
-            font-size: 6rem;
-        }
+    @include bp (768) {
+        width: 100%;
     }
 }
 
+// scrolling text
 
+.content {
+        width: 350px;
+        font-size: 3.6rem;
+        line-height: 40px;
+        color: $secondary;
+        margin: auto 0;
+        @include bp (1068) {
+            font-size: 3.2rem;
+        }
+        @include bp (980) {
+            font-size: 2.8rem;
+        }
+        @include bp (768) {
+            font-size: 3.6rem;
+        }
+        @include bp (480) {
+            font-size: 3.4rem;
+        }
+    }
+    .static {
+        float: left;
+        overflow: hidden;
+        height: 40px;
+    }
+    .animatedList {
+        margin-top: 0;
+        text-align: left;
+        list-style: none;
+        animation: 8s ease-in-out 0s normal none infinite change;
+        @include bp (768) {
+            text-align: center;
+        }
+    }
+    .animatedList li {
+        color: $secondary;
+        font-family: 'Raleway';
+        line-height: 40px;
+        margin: 0;
+        clear: right;
 
-// scrolltop ()
+    }
+    @keyframes change {
+        0% { margin-top: 0; }
+        15% { margin-top: 0; }
+        25% { margin-top: -43px; }
+        40% { margin-top: -43px; }
+        50% { margin-top: -86px; }
+        65% { margin-top: -86px; }
+        75% { margin-top: -43px; }
+        85% { margin-top: -43px; }
+        100% { margin-top: 0; }
+    }
