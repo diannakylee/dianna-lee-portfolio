@@ -46,6 +46,9 @@
 
     & h1 {
         font-size: 7rem;
+        @include bp (570) {
+            font-size: 5rem;
+        }
     }
     & h4 {
         position: absolute;
@@ -72,22 +75,33 @@ form {
     flex-direction: column;
     margin-bottom: 10px;
     color: $secondary;
+    &__submit {
+        display: block;
+    }
+}
+
+textarea {
+    padding: 5px;
 }
 
 .circle--contact {
     width: 150px;
     height: 150px;
     background-color: $lightGrey;
-    background-image: url('/src/assets/heyhellowhatsup-jannes-709617-unsplash.jpg');
+    background-image: url('/public/assets/heyhellowhatsup-jannes-709617-unsplash.jpg');
     background-size: 200%;
     background-position: -85px -40px;
     position: absolute;
     left: -80px;
     top: 275px;
+    -webkit-clip-path: circle(50%);
     clip-path: circle(50%);
     @include bp(768) {
         left: inherit;
         top: -150px;
         right: 20px;
+    }
+     @include bp (570) {
+        display: none
     }
 }

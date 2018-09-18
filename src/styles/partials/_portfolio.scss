@@ -55,6 +55,9 @@
     & h1 {
         font-size: 7rem;
         color: $lightGrey;
+        @include bp (570) {
+            font-size: 5rem;
+        }
     }
     & h4 {
         position: absolute;
@@ -92,10 +95,16 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        @include bp (570) {
+            width: 90%;
+        }
     }
     &--links {
         display: flex;
         margin-top: 20px;
+        @include bp (570) {
+            margin-top: 0;
+        }
     }
     & p {
         @include bp(768) {
@@ -130,9 +139,6 @@
     }
     &__one {
         background-color: $primary;
-        &:hover {
-            
-        }
     }
     &__two {
         background-color: #3d3c3c;

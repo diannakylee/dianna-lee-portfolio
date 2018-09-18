@@ -47,6 +47,9 @@
     position: relative;
     & h1 {
         font-size: 7rem;
+        @include bp (570) {
+            font-size: 5rem;
+        }
     }
     & h4 {
         position: absolute;
@@ -55,24 +58,31 @@
 }
 
 .skills--blurb {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    // flex-direction: column;
     justify-content: center;
     align-items: center;
     @include bp(768) {
         height: 60vh;
         justify-content: flex-start;
+        align-items: flex-start;
         }
     & h1 {
         margin: 15px;
         font-size: 5rem;
+        @include bp(570) {
+            font-size: 3.6rem;
+        }
         &:hover {
             color: $secondary;
         }
     }
     &__row {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

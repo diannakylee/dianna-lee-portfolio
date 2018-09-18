@@ -30,6 +30,9 @@
             height: 60vh;
             padding-top: 5%;
         }
+        @include bp (480) {
+            padding: 0px;
+        }
     }
 }
 
@@ -48,6 +51,9 @@
     position: relative;
     & h1 {
         font-size: 7rem;
+        @include bp (570){
+            font-size: 5rem;
+        }
     }
     & h4 {
         position: absolute;
@@ -59,17 +65,21 @@
     width: 150px;
     height: 150px;
     background-color: $lightGrey;
-    background: url('/src/assets/dleecam.jpg');
+    background: url('/public/assets/dleecam.jpg');
     background-size: 200%;
     background-position: -85px -40px;
     position: absolute;
     left: -80px;
     top: 100px;
+    -webkit-clip-path: circle(50%);
     clip-path: circle(50%);
     @include bp (768) {
         left: inherit;
         right: 20px;
         top: -150px;
+    }
+    @include bp (570) {
+        display: none;
     }
 }
 
@@ -83,16 +93,25 @@
         height: 60vh;
         justify-content: flex-start;
         align-items: flex-start;
+        margin: 0 20px;
         }
     &__text {
         display: flex;
         flex-direction: column;
+        @include bp (570) {
+            text-align: center;
+        }
         & a {
             margin: 0;
             padding: 0;
         }
         & p {
             margin-top: 15px;
+        }
+        & h2 {
+            @include bp (480) {
+                display: none;
+            }
         }
     }
 }

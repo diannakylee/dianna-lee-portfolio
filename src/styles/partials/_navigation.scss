@@ -52,31 +52,31 @@
 // social 
 
 .social {
-	top: 225px;
+	top: 50%;
     position: fixed;
-	right: 0px;
-	z-index: 101;
-	@include bp(768){
-		top: 390px;
-	}
+	right: 20px;
+	transform: translateY(-50%);
+	z-index: 999;
     & ul {
 		display: flex;
 		flex-direction: column;
         width: 100%;
-        margin-bottom: 15px;
+		margin-bottom: 15px;
     }
     & ul li {
-        margin: 5px 5px;
+        margin: 5px 0px;
     }
     & ul li a {
         font-size: 2.4rem;
         color: $lightGrey;
 		transition: 300ms;
+		@include bp (768) {
+			font-size: 2rem;
+		}
 		&:hover {
 			color: $medGrey;
 		}
     }
-    
 }
 
 .social--link a:hover {
